@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haircare Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Personalized Hair Profile</h1>
+        <form id="hairProfileForm">
+            <div class="form-group">
+                <label for="hairType">Hair Type:</label>
+                <select id="hairType" name="hairType" required>
+                    <option value="">Select Hair Type</option>
+                    <option value="Straight">Straight</option>
+                    <option value="Wavy">Wavy</option>
+                    <option value="Curly">Curly</option>
+                    <option value="Coily">Coily</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hairTexture">Hair Texture:</label>
+                <select id="hairTexture" name="hairTexture" required>
+                    <option value="">Select Hair Texture</option>
+                    <option value="fine">Fine</option>
+                    <option value="medium">Medium</option>
+                    <option value="thick">Thick</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="scalpCondition">Scalp Condition:</label>
+                <select id="scalpCondition" name="scalpCondition" required>
+                    <option value="">Select Scalp Condition</option>
+                    <option value="dry">Dry</option>
+                    <option value="oily">Oily</option>
+                    <option value="normal">Normal</option>
+                    <option value="sensitive">Sensitive</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hairLength">Hair Length:</label>
+                <select id="hairLength" name="hairLength" required>
+                    <option value="">Select Hair Length</option>
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Hair Concerns (Select all that apply):</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="frizz" name="hairConcerns" value="Frizz">
+                        <label for="frizz">Frizz</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hairLoss" name="hairConcerns" value="Hair Fall">
+                        <label for="hairLoss">Hair Loss</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="dandruff" name="hairConcerns" value="Dandruff">
+                        <label for="dandruff">Dandruff</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="splitEnds" name="hairConcerns" value="Split Ends">
+                        <label for="splitEnds">Split Ends</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="dryness" name="hairConcerns" value="Dryness">
+                        <label for="dryness">Dryness</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="hairGoals">Hair Goals (Optional):</label>
+                <input type="text" id="hairGoals" name="hairGoals" placeholder="e.g., Volume, Shine, Strength, Growth, Moisture">
+            </div>
+
+            <button type="submit">Get Recommendations</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h1>Your Personalized Hair Care Recommendations</h1>
+        <div id="userProfile">
+            <h2>Your Hair Profile</h2>
+            <p id="profileDetails"></p>
+        </div>
+        <div id="recommendations" class="recommendations">
+            
+        </div>
+        <div id="routineBenefits">
+            <h2>Haircare Tips for You!</h2>
+            <p id="benefitsDetails"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
